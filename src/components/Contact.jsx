@@ -10,6 +10,8 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -36,7 +38,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch(`${API_BASE_URL}/send-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

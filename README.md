@@ -20,3 +20,25 @@ I'm always excited to connect with fellow creatives and enthusiasts. Whether you
 - LinkedIn: [linkedin.com/in/kamranikramofficial](https://www.linkedin.com/in/kamranikramofficial)
 
 Let's turn imagination into reality, one pixel at a time! ✨
+
+## 🛠 Contact API Backend
+
+The contact form now posts to a lightweight Express server that sends confirmation emails (to you and to the visitor) and saves each submission to MongoDB.
+
+1. Create a `.env` file (same folder as `server/index.js`) with:
+   ```
+   PORT=5000
+   CLIENT_ORIGIN=http://localhost:5173
+   MONGODB_URI=your-mongodb-connection-string
+   SMTP_HOST=your-smtp-host
+   SMTP_PORT=587
+   SMTP_SECURE=false
+   SMTP_USER=your-smtp-username
+   SMTP_PASS=your-smtp-password
+   MAIL_FROM="Portfolio Team" <no-reply@example.com>
+   MAIL_TO=owner@example.com
+   ```
+2. Install dependencies once with `npm install`.
+3. Start the API via `npm run server` (it defaults to port 5000) and run the Vite app separately with `npm run dev`.
+
+Configure `VITE_API_BASE_URL` in the front-end `.env` if you deploy the backend to a different host.

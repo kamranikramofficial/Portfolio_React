@@ -13,6 +13,7 @@ import javascript from "./tech/javascript.png";
 import java from "./tech/java.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
+import shadcn from "./tech/shadcn.png";
 
 import materialui from "./tech/materialui.png";
 import bootstrap from "./tech/bootstrap.png";
@@ -36,9 +37,6 @@ import project5 from "./tech/project5.png";
 import project6 from "./tech/project6.png";
 import linkedin from "./tech/linkedin.jpg";
 
-import portfolio from "./3dportfolio.png";
-import pglife from "./pglife.png";
-import sortingvisualiser from "./sortingvisualiser.png";
 
 export {
   logo,
@@ -65,9 +63,7 @@ export {
   firebase,
   supabase,
   linkedin,
-  portfolio,
-  pglife,
-  sortingvisualiser,
+  shadcn,
 
   college,
  saylani,

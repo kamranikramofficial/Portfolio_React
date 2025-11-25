@@ -16,6 +16,7 @@ import {
   tailwind,
   materialui,
   bootstrap,
+  shadcn,
 
   // Backend & databases
   nodejs,
@@ -38,9 +39,7 @@ import {
 freecodecamp,
 linkedin,  
   // Experience / projects / others
-  portfolio,
-  pglife,
-  sortingvisualiser,
+
   login,
   project2,
   project3,
@@ -152,6 +151,10 @@ const technologies = [
   {
     name: "Material UI",
     icon: materialui,
+  },
+  {
+    name:"Shadcn UI",
+    icon: shadcn,
   },
   {
     name: "Bootstrap",
