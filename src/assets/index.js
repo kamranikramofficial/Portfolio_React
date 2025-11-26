@@ -30,10 +30,10 @@ import saylani from "./tech/saylani.png";
 import alberuni from "./tech/alberuni.jpg";
 
 import login from "./tech/login.png";
-import project2 from "./tech/project2.png";
-import project3 from "./tech/project3.png";
-import project4 from "./tech/project4.png";
-import project5 from "./tech/project5.png";
+import project2 from "./tech/Project2.png";
+import project3 from "./tech/Project3.png";
+import project4 from "./tech/Project4.png";
+import project5 from "./tech/Project5.png";
 import project6 from "./tech/project6.png";
 import linkedin from "./tech/linkedin.jpg";
 
