@@ -21,7 +21,8 @@ const normalizeBaseUrl = () => {
     return "http://localhost:5000";
   }
 
-  return "https://portfolio-react-55c1.onrender.com";
+  // In production on Vercel, we'll use relative `/api` routes
+  return "";
 };
 
 const API_BASE_URL = normalizeBaseUrl();
@@ -51,7 +52,9 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const endpoint = `${API_BASE_URL}/send-email`;
+    const endpoint = import.meta.env.DEV
+      ? `${API_BASE_URL}/send-email`
+      : "/api/send-email";
 
     try {
       const response = await fetch(endpoint, {
