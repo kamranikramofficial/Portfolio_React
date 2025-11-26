@@ -41,4 +41,4 @@ The contact form now posts to a lightweight Express server that sends confirmati
 2. Install dependencies once with `npm install`.
 3. Start the API via `npm run server` (it defaults to port 5000) and run the Vite app separately with `npm run dev`.
 
-Configure `VITE_API_BASE_URL` in the front-end `.env` if you deploy the backend to a different host.
+Configure `VITE_API_BASE_URL` in the front-end `.env` if you deploy the backend to a different host.  
