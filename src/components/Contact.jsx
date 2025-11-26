@@ -10,7 +10,21 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://portfolio-react-55c1.onrender.com";
+const normalizeBaseUrl = () => {
+  const envValue = import.meta.env.VITE_API_BASE_URL?.trim();
+
+  if (envValue) {
+    return envValue.replace(/\/+$/, "");
+  }
+
+  if (import.meta.env.DEV) {
+    return "http://localhost:5000";
+  }
+
+  return "https://portfolio-react-55c1.onrender.com";
+};
+
+const API_BASE_URL = normalizeBaseUrl();
 
 const Contact = () => {
   const formRef = useRef();
@@ -37,8 +51,10 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    const endpoint = `${API_BASE_URL}/send-email`;
+
     try {
-      const response = await fetch(`${API_BASE_URL}/send-email`, {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -49,6 +65,8 @@ const Contact = () => {
         }),
       });
 
+      const payload = await response.json().catch(() => ({}));
+
       if (response.ok) {
         Swal.fire({
           icon: "success",
@@ -58,19 +76,26 @@ const Contact = () => {
         });
         setForm({ name: "", email: "", location: "", message: "" });
       } else {
+        const errorText = payload?.error || "Please try again later.";
         Swal.fire({
           icon: "error",
           title: "Something went wrong!",
-          text: "Please try again later.",
+          text: errorText,
           confirmButtonColor: "#915EFF",
         });
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error(`Failed to reach ${endpoint}`, error);
+
+      const fallbackMessage =
+        error?.message?.includes("Failed to fetch")
+          ? "We could not reach the server. Please verify your internet connection or try again in a moment."
+          : "Unable to send your message. Please try again.";
+
       Swal.fire({
         icon: "error",
         title: "Server Error!",
-        text: "Unable to send your message. Please try again.",
+        text: fallbackMessage,
         confirmButtonColor: "#915EFF",
       });
     } finally {
