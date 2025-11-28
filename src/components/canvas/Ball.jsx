@@ -60,9 +60,13 @@ export { Ball };
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
+      className="w-full h-full"
       frameloop="always"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1, 1.5]}
+      gl={{
+        preserveDrawingBuffer: false,
+        powerPreference: "high-performance",
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />

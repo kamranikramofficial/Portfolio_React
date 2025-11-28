@@ -240,6 +240,7 @@ const extracurricular = [
       "Collaborated with fellow developers to create innovative tech-driven solutions.",
       "Event held at Zaitoon Ashraf IT Park, Shahrah-e-Faisal, Karachi.",
     ],
+        credential: "https://drive.google.com/file/d/1fHKioG-mRVqBchKNM8jCLxY2poEG83lU/view",
   },
   {
     title: "Volunteer - Saylani Mass IT Training Program",

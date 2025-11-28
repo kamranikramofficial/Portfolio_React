@@ -18,15 +18,17 @@ const Tech = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h3 className={`${styles.sectionHeadText} text-center`}>
-          Skills.
-        </h3>
+        <h3 className={`${styles.sectionHeadText} text-center`}>Skills.</h3>
       </motion.div>
 
-      <div className="hidden sm:flex">
-        <div className="flex flex-row flex-wrap justify-center gap-10">
+      {/* Responsive skills grid */}
+      <div className="mt-10 flex justify-center">
+        <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
           {visibleTechnologies.map((technology, index) => (
-            <div className="w-28 h-28" key={`${technology.name}-${startIdx}-${index}`}> 
+            <div
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+              key={`${technology.name}-${startIdx}-${index}`}
+            >
               <BallCanvas icon={technology.icon} />
             </div>
           ))}

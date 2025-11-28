@@ -73,9 +73,11 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <br /><br /><br />
 
-      <ComputersCanvas />
+      {/* Responsive 3D computer canvas */}
+      <div className="w-full h-[260px] xs:h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px] mt-10">
+        <ComputersCanvas />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
