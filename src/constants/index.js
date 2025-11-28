@@ -261,7 +261,7 @@ const extracurricular = [
     icon: freecodecamp, 
     date: "Mar 2025",
     points: ["Credential ID: kamranikram-jaads"],
-    credential: "https://www.freecodecamp.org/certification/kamranikramofficial/javascript-algorithms-and-data-structures",
+    credential: "https://www.freecodecamp.org/certification/kamranikram/javascript-algorithms-and-data-structures",
   },
   {
     title: "Responsive Web Design",
@@ -270,7 +270,7 @@ const extracurricular = [
     iconBg: "#0A0A23",
     date: "Mar 2025",
     points: ["Credential ID: kamranikram-rwd"],
-    credential: "https://www.freecodecamp.org/certification/kamranikramofficial/responsive-web-design",
+    credential: "https://www.freecodecamp.org/certification/kamranikram/responsive-web-design",
   },
   {
     title: "5,424+ Followers on LinkedIn",
