@@ -16,7 +16,7 @@ Ready to experience my 3D portfolio? Head over to [kamran-ikram-official.vercel.
 
 I'm always excited to connect with fellow creatives and enthusiasts. Whether you have feedback, project ideas, or just want to say hi, feel free to reach out to me:
 
-- Email: kamran.s.official032997@gmail.com
+- Email: kamranikramofficial@gmail.com
 - LinkedIn: [linkedin.com/in/kamranikramofficial](https://www.linkedin.com/in/kamranikramofficial)
 
 Let's turn imagination into reality, one pixel at a time! ✨
